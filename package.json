@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for make-your-own-client-jam by Digital Ungdom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Digital Ungdom",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.6",
+    "protobufjs": "^6.10.2",
+    "shortid": "^2.2.16",
+    "ws": "^7.4.0"
+  }
+}
