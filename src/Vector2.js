@@ -14,21 +14,21 @@ module.exports = class Vector2 {
   // Returns values between 1 - 0
   normalized() {
     let mag = this.magnitude();
-    return new Vector2(this.x / mag, this.y / mag);
+    return new Vector2(this.x / (mag + 0.0001), this.y / (mag + 0.0001));
   }
 
   add(OtherVect = Vector2) {
-    let sum = new Vector2();
-    sum.x += OtherVect.x;
-    sum.y += OtherVect.y;
-    return sum;
+    let newVect = new Vector2();
+    newVect.x += this.x + OtherVect.x;
+    newVect.y += this.y + OtherVect.y;
+    return newVect;
   }
 
-  subtract(OtherVect = Vector2) {
-    let diff = new Vector2();
-    diff.x += OtherVect.x;
-    diff.y += OtherVect.y;
-    return diff;
+  multiply(val) {
+    let newVect = new Vector2();
+    newVect.x = this.x * val;
+    newVect.y = this.y * val;
+    return newVect;
   }
 
   distance(OtherVect = Vector2) {
